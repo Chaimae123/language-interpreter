@@ -1,6 +1,6 @@
 package com.codechallenge.demo.Model;
 
-public class PythonCode {
+public class CodeModel {
     private String code;
 
     public String getCode() {
