@@ -9,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -23,7 +22,6 @@ public class PythonParserContrallerTest {
     @Autowired
     private MockMvc mockMvc;
     String input = "{\r\n \"code\":\"%python print 1  \"\r\n }";
-    String invalidInput = "{\r\n \"code\":\"%python print 1 \"\r\n ";
 
     @Test
     public void parsePythonInputCodeValid() throws Exception {
@@ -34,4 +32,5 @@ public class PythonParserContrallerTest {
                 .andDo(print())
                 .andExpect(content().string("{\r\n  \"result\" : \"1\"\r\n}"));
     }
+
 }
