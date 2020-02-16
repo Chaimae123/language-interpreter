@@ -15,6 +15,9 @@ public class PlotBox {
     private Integer q3;
     private List<Integer> outliers;
 
+    public PlotBox(){
+
+    }
     public PlotBox(Integer id, String series, String group, Integer low, Integer high, Integer z, Integer q1, Integer q2, Integer q3) {
         this.id = id;
         this.series = series;

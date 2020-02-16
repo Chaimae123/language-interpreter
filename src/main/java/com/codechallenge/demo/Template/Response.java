@@ -1,14 +1,13 @@
 package com.codechallenge.demo.Template;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Response<T> {
 
     private List<T> data;
-    private ArrayList<String> series;
+    private List<String> series;
 
-    public Response(List<T> data, ArrayList<String> series) {
+    public Response(List<T> data, List<String> series) {
         this.data = data;
         this.series = series;
     }
@@ -21,11 +20,11 @@ public class Response<T> {
         this.data = data;
     }
 
-    public ArrayList<String> getSeries() {
+    public List<String> getSeries() {
         return series;
     }
 
-    public void setSeries(ArrayList<String> series) {
+    public void setSeries(List<String> series) {
         this.series = series;
     }
 }

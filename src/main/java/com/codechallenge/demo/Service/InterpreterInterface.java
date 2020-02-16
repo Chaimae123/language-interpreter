@@ -6,13 +6,12 @@ import com.codechallenge.demo.Model.PlotBox;
 import com.codechallenge.demo.Model.ScatterChart;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 
-public interface PythonParserInterface {
+public interface InterpreterInterface {
     String pythonCodeParser(String code, HttpSession session);
-    List<ScatterChart> scatterChartDataGenerator(ArrayList<String> series, ArrayList<Integer> values);
-    List<PlotBox> plotBoxDataGenerator(ArrayList<String> series, ArrayList<Integer> values);
-    List<BarChart> barChartDataGenerator(ArrayList<String> series, ArrayList<Integer> values);
+    List<ScatterChart> scatterChartDataGenerator(List<String> series, List<Integer> values);
+    List<PlotBox> plotBoxDataGenerator(List<String> series, List<Integer> values);
+    List<BarChart> barChartDataGenerator(List<String> series, List<Integer> values);
     InputData getSeriesFromInput(String data);
 }
